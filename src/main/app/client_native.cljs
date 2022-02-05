@@ -17,6 +17,7 @@
   {:dev/after-load true}
   []
   (log/info "Re-mounting")
+  (log/spy SERVER_URL)
   (app/mount! @SPA root/Root :i-got-no-dom-node))
 
 (defn init []
